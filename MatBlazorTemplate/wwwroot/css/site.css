@@ -1,0 +1,7 @@
+html, body {
+    margin: 0px;
+}
+
+.mdc-drawer-app-content {
+    padding: 0 12px;
+}
