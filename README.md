@@ -1,2 +1,2 @@
 # MatBlazorTemplate
-This is a conversion of the default template that comes with server-side Blazor to material design using the MatBlazor library.
+This is a conversion of the default server-side Blazor template from Bootstrap to material design using the MatBlazor library.
