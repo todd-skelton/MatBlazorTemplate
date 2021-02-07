@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
@@ -10,8 +6,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using ServerSideBlazor.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
-using EmbeddedBlazorContent;
+using System.Threading.Tasks;
 
 namespace ServerSideBlazor
 {
@@ -50,8 +49,6 @@ namespace ServerSideBlazor
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
-            app.UseEmbeddedBlazorContent(typeof(MatBlazor.BaseMatComponent).Assembly);
 
             app.UseRouting();
 

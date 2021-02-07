@@ -1,7 +1,5 @@
 ﻿@page "/fetchdata"
-
-@using ServerSideBlazor.Data
-@inject WeatherForecastService ForecastService
+@inject HttpClient Http
 
 <h1>Weather forecast</h1>
 
@@ -30,10 +28,22 @@ else
 }
 
 @code {
-    WeatherForecast[] forecasts;
+    private WeatherForecast[] forecasts;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        await Task.Delay(1000);
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    }
+
+    public class WeatherForecast
+    {
+        public DateTime Date { get; set; }
+
+        public int TemperatureC { get; set; }
+
+        public string Summary { get; set; }
+
+        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
     }
 }

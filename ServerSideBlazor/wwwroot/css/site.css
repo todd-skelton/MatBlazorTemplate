@@ -1,0 +1,25 @@
+html, body {
+    margin: 0px;
+}
+
+app {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.mdc-drawer-app-content {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.mdc-drawer-app-content .mat-drawer-app-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mdc-paginator-container {
+    width: auto;
+}
